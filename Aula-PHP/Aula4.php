@@ -57,3 +57,25 @@ echo"<p> Oi, td bom?</p>";
 $cor = "vermelha";
 echo"<p> A cor $cor </p>";
 ?>
+
+<?php
+echo '<br>';
+// strlen() - conta a quantidade de strings
+echo strlen("O rato roeu a roupa do rei de roma.");
+echo '<br>';
+// str_word_count() - conta a quantidade de palavras
+echo str_word_count("O rato roeu a roupa do rei de roma.");
+echo '<br>';
+//strrev() - fazer de tras pra frente uma palavra
+echo strrev("O rato roeu a roupa do rei de roma.");
+echo '<br>';
+// strpos() - retorna a posicao da palavra procurada
+echo strpos("O rato roeu a roupa do rei de roma.", "O");
+echo '<br>';
+//str_replace() - substituir
+$frase = "O rato roeu a roupa do rei de roma.";
+echo str_replace("rei", "siri" , $frase);
+echo '<br>';
+//data
+
+?>
