@@ -11,16 +11,57 @@ vh = % da altura  da tela, ou seja, no caso e quanto o main-login vai ocupar
 
 .main-login{width: 100vw;
             height: 100vh;
-            background: rgb(7, 7, 79);
+            background: rgb(50, 47, 236);
             display: flex;
             justify-content:center;
             align-items: center;}
 
 .left-login{width: 50vw;
             height: 100vh;
-            background: rgb(7, 7, 79);
             display: flex;
             justify-content:center;
-            align-items: center;}
+            align-items: center;
+            flex-direction: column;}
 
-.left.left-login > h1{color: aquamarine;}
+.left-login > h1{color: rgb(136, 195, 175);}
+
+.right-login{width: 50vw;
+             height: 100vh;
+             display: flex;
+             justify-content:center;
+             align-items: center;}
+
+/*
+% = porcent do espaco ja separado
+*/
+
+.card-login{width:  60%;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px 35px;
+            background: #cbec15;
+            border-radius: 20px;
+            box-shadow: 0px 10px 40px rgb(0, 0, 0);}
+/*
+box-shadow: direita-esquerda; cima-baixo; blur?; cor da sombra;
+*/
+
+.card-login > h1 {color: rgb(226, 84, 13);
+                  font-weight: 800;
+                  margin: 0;}
+
+/*
+*/
+
+.textfield{display: flex;
+           flex-direction: column;
+           align-items: flex-start;
+           justify-content: center;}
+
+/*
+flex-direction: 
+     align-items: passa a ser sobre o eixo X
+     justify-content: passa a ser sobre o eixo y
+*/
