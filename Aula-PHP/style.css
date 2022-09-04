@@ -1,8 +1,14 @@
 
+@import url('http://fonts.googleapis.com/css2?family=Noto+Sans:wgt@400;700&display=swap');
+
 /*
 Tirando a margem default
 */
-body{margin: 0;}
+body{margin: 0;
+     font-family: 'Noto-Sans';}
+
+/*
+*/
 
 /*
 vw = % da largura da tela, ou seja, no caso e quanto o main-login vai ocupar
@@ -11,7 +17,7 @@ vh = % da altura  da tela, ou seja, no caso e quanto o main-login vai ocupar
 
 .main-login{width: 100vw;
             height: 100vh;
-            background: rgb(50, 47, 236);
+            background: rgb(255, 255, 255);
             display: flex;
             justify-content:center;
             align-items: center;}
@@ -21,15 +27,20 @@ vh = % da altura  da tela, ou seja, no caso e quanto o main-login vai ocupar
             display: flex;
             justify-content:center;
             align-items: center;
-            flex-direction: column;}
+            flex-direction: column;
+            background: #ffffff;}
 
-.left-login > h1{color: rgb(136, 195, 175);}
+.left-login > h1{color: rgb(0, 0, 0);
+                 font-size: 3vw;}
+
+.left-img {width: 35vw;}
 
 .right-login{width: 50vw;
              height: 100vh;
              display: flex;
              justify-content:center;
-             align-items: center;}
+             align-items: center;
+             background:#e2310d;}
 
 /*
 % = porcent do espaco ja separado
@@ -41,27 +52,79 @@ vh = % da altura  da tela, ou seja, no caso e quanto o main-login vai ocupar
             align-items: center;
             flex-direction: column;
             padding: 30px 35px;
-            background: #cbec15;
+            background: #ffffff;
             border-radius: 20px;
             box-shadow: 0px 10px 40px rgb(0, 0, 0);}
 /*
 box-shadow: direita-esquerda; cima-baixo; blur?; cor da sombra;
 */
 
-.card-login > h1 {color: rgb(226, 84, 13);
+.card-login > h1 {color: rgb(0, 0, 0);
                   font-weight: 800;
                   margin: 0;}
 
 /*
 */
 
-.textfield{display: flex;
+.textfield{width: 100%;
+           display: flex;
            flex-direction: column;
            align-items: flex-start;
-           justify-content: center;}
+           justify-content: center;
+           margin: 10px 0px}
 
 /*
 flex-direction: 
      align-items: passa a ser sobre o eixo X
      justify-content: passa a ser sobre o eixo y
 */
+
+.textfield > input {width: 100%;
+                    border: none;
+                    border-radius: 10px;
+                    padding: 15px;
+                    background: #e2310d;
+                    color: #000000;;
+                    font-size: 12pt;
+                    box-shadow: 0px 0px 40px rgb(0, 0, 0);
+                    outline: none;
+                    box-sizing: border-box;}
+
+.textfield > label {color: rgb(255, 255, 255);
+                    margin-bottom: 10px;}
+
+.textfield >  input::placeholder{ color: rgb(0, 0, 0);}
+
+.btn-login{width: 100%;
+           padding: 16px 0px;
+           margin: 25px;
+           border: none;
+           border-radius: 8px;
+           outline: none;
+           text-transform: uppercase;
+           font-weight: 800;
+           letter-spacing: 3px;
+           color: #000000;
+           background: #e2310d;
+           cursor: pointer;
+           box-shadow: 0px 10px 40px -12px #000000;}
+
+/*
+Enquanto a tela tiver pelo menos 950px de tamanho, os elementos citados devem aparecer.
+Caso nao tenha, devem sumir.
+*/
+
+@media only screen and (max-width: 950px){
+       .card-login{width: 85%}
+}
+
+@media only screen and (max-width: 600px){
+     .main-login{flex-direction: column;}
+     .left-login > h1 {display: none;}
+     .left-login{width: 100%;
+                 height: auto;}
+     .right-login{width: 100%;
+                  height: auto;}
+     .left-img{width: 50vw;}
+     .card-login{width: 90%;}
+}
